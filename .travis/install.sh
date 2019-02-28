@@ -1,20 +1,24 @@
 #!/usr/bin/env sh
 set -v
 
-pwd
-git clone https://github.com/pulp/ansible-pulp35.git
+# pwd
+# /home/travis/build/asmacdo/pulpcore
+git clone https://github.com/pulp/ansible-pulp3.git
 git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
 
 
-cp .travis/playbook.yml ansible-pulp3/playbook.yml
 
+# Install latest ansible
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ansible-playbook --version
+
+# Run Ansible playbook
+cp .travis/playbook.yml ansible-pulp3/playbook.yml
 cd ansible-pulp3
 ansible-galaxy install -r requirements.yml
 ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
