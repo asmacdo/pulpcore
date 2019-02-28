@@ -3,6 +3,9 @@ set -v
 
 # pwd
 # /home/travis/build/asmacdo/pulpcore
+ls /home/travis/build/asmacdo/pulpcore
+ls /home/travis/build/asmacdo/pulpcore/pulpcore
+cd ..
 git clone https://github.com/pulp/ansible-pulp3.git
 # git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
