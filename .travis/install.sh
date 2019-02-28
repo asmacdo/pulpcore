@@ -4,7 +4,7 @@ set -v
 # pwd
 # /home/travis/build/asmacdo/pulpcore
 git clone https://github.com/pulp/ansible-pulp3.git
-git clone https://github.com/pulp/pulpcore.git
+# git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
 
