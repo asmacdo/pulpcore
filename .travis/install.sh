@@ -15,6 +15,7 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ansible-playbook --version
 cd ansible-pulp3
+ansible-galaxy install -r requirements.yml
 ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
 
 # # dev_requirements should not be needed for testing; don't install them to make sure
