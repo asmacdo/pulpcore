@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 set -v
 
-git clone https://github.com/pulp/ansible-pulp3.git
+pwd
+git clone https://github.com/pulp/ansible-pulp35.git
 git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
