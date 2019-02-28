@@ -2,7 +2,7 @@
 set -v
 
 git clone https://github.com/pulp/ansible-pulp3.git
-git clone https://github.com/pulp/pulp.git
+git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
 
@@ -15,7 +15,7 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 ansible-playbook --version
 cd ansible-pulp3
-# ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
+ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
 
 # # dev_requirements should not be needed for testing; don't install them to make sure
 # pip install "Django<=$DJANGO_MAX"
