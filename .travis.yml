@@ -16,7 +16,6 @@ addons:
   apt:
     packages:
       - httpie
-      - ansible
       - jq
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?

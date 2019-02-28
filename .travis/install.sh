@@ -9,8 +9,12 @@ git clone https://github.com/pulp/pulp_file.git
 
 cp .travis/playbook.yml ansible-pulp3/playbook.yml
 
-cd ansible-pulp3
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get install ansible
 ansible-playbook --version
+cd ansible-pulp3
 # ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
 
 # # dev_requirements should not be needed for testing; don't install them to make sure
