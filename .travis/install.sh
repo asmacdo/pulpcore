@@ -6,7 +6,7 @@ set -v
 ls /home/travis/build/asmacdo/pulpcore
 ls /home/travis/build/asmacdo/pulpcore/pulpcore
 cd ..
-git clone https://github.com/pulp/ansible-pulp3.git
+git clone https://github.com/asmacdo/ansible-pulp3.git
 # git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
@@ -23,6 +23,7 @@ ansible-playbook --version
 # Run Ansible playbook
 cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
+git checkout origin/listen-localhost
 ansible-galaxy install -r requirements.yml
 ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
