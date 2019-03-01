@@ -24,7 +24,7 @@ ansible-playbook --version
 cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
 ansible-galaxy install -r requirements.yml
-ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml
+ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
 
 # # dev_requirements should not be needed for testing; don't install them to make sure
