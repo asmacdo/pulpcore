@@ -3,17 +3,17 @@ set -v
 
 # pwd
 # /home/travis/build/asmacdo/pulpcore
-ls /home/travis/build/asmacdo/pulpcore
-ls /home/travis/build/asmacdo/pulpcore/pulpcore
+# ls /home/travis/build/asmacdo/pulpcore
+# ls /home/travis/build/asmacdo/pulpcore/pulpcore
 cd ..
 git clone https://github.com/asmacdo/ansible-pulp3.git
 # git clone https://github.com/pulp/pulpcore.git
 git clone https://github.com/pulp/pulpcore-plugin.git
 git clone https://github.com/pulp/pulp_file.git
+#
 
 
-
-# Install latest ansible
+Install latest ansible
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
