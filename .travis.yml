@@ -20,9 +20,9 @@ addons:
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?
   postgresql: '9.6'
-# services:
+services:
   # TODO
-  # - postgresql
+  - postgresql
   # - redis-server
 install: source .travis/install.sh
 # before_script: source .travis/before_script.sh
