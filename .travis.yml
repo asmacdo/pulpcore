@@ -17,15 +17,15 @@ addons:
     packages:
       - httpie
       - jq
-      - postgresql
-      - postgresql-contrib
+      # - postgresql
+      # - postgresql-contrib
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?
-services:
+# services:
   # TODO
-  - postgresql
+  # - postgresql
   # - redis-server
-# install: source .travis/install.sh
+install: source .travis/install.sh
 # before_script: source .travis/before_script.sh
 # script: .travis/script.sh
 # jobs:
