@@ -17,9 +17,10 @@ addons:
     packages:
       - httpie
       - jq
+      - postgresql
+      - postgresql-contrib
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?
-  postgresql: '9.6'
 services:
   # TODO
   - postgresql
