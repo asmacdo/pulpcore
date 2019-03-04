@@ -19,7 +19,7 @@ addons:
       - jq
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?
-  postgresql: '10.6'
+  postgresql: '9.6'
 services:
   # TODO
   - postgresql

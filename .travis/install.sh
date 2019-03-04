@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 set -v
 
+psql -U postgres -c 'CREATE USER pulp WITH SUPERUSER LOGIN;'
+psql -U postgres -c 'CREATE DATABASE pulp OWNER pulp;'
+
 # pwd
 # /home/travis/build/asmacdo/pulpcore
 # ls /home/travis/build/asmacdo/pulpcore
