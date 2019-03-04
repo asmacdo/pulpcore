@@ -25,7 +25,6 @@ ansible-playbook --version
 # Run Ansible playbook
 cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
-git checkout origin/listen-localhost
 ansible-galaxy install -r requirements.yml
 ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
