@@ -15,6 +15,7 @@
     postgresql_daemon: postgresql@9.5-main
     pulp_postgresql_user: 'travis'
     pulp_postgresql_password: 'pulp'
+    postgresql_user: 'travis'
   roles:
     - pulp3-postgresql
     - pulp3-workers
