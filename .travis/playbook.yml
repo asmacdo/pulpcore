@@ -13,7 +13,7 @@
     pulp_user: 'travis'
     developer_user: 'travis'
     postgresql_daemon: postgresql@9.5-main
-    pulp_postgresql_user: 'pulp'
+    pulp_postgresql_user: 'travis'
     pulp_postgresql_password: 'pulp'
   roles:
     - pulp3-postgresql
