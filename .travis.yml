@@ -25,7 +25,7 @@ services:
   # TODO
   - postgresql
   # - redis-server
-install: source .travis/install.sh
+# install: source .travis/install.sh
 # before_script: source .travis/before_script.sh
 # script: .travis/script.sh
 # jobs:
