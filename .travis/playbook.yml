@@ -12,7 +12,7 @@
     ansible_python_interpreter: /opt/pyenv/shims/python3
     pulp_user: 'travis'
     developer_user: 'travis'
-    postgresql_daemon: postgresql@9.5-main
+    postgresql_daemon: postgresql@11-main
     pulp_postgresql_user: 'travis'
     pulp_postgresql_password: 'pulp'
     postgresql_user: 'travis'
