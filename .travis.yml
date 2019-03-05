@@ -21,7 +21,8 @@ addons:
       # - postgresql-contrib
   # postgres versions provided by el7 RHSCL (lowest supportable version)
   # TODO should this just use ansible role?
-# services:
+services:
+  - docker
   # TODO
   # - postgresql
   # - redis-server
