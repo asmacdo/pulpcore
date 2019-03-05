@@ -31,6 +31,7 @@ pushd ansible-pulp3
 molecule converge --scenario-name smash
 # ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
+cd pulpcore
 
 # Add molecule container hostname and ip to /etc/hosts
 # docker exec -it fedora-28 /usr/bin/cat /etc/hosts | grep f28 | sudo tee --append /etc/hosts
