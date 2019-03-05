@@ -13,9 +13,7 @@ pip install docker
 pip install ansible
 
 cd ..
-git clone https://github.com/asmacdo/ansible-pulp3.git
-git clone https://github.com/pulp/pulpcore-plugin.git
-git clone https://github.com/pulp/pulp_file.git
+git clone https://github.com/pulp/ansible-pulp3.git
 #
 
 
