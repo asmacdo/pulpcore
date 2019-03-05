@@ -2,7 +2,7 @@
 # coding=utf-8
 
 # Run unit tests
-docker exec -it fedora-28 /usr/local/lib/pulp/bin/ manage.py test ./pulpcore/tests/unit/
+docker exec -it fedora-28 /usr/local/lib/pulp/bin/manage.py test ./pulpcore/tests/unit/
 
 docker exec -it fedora-28 /usr/bin/mkdir -p /root/.config/pulp_smash/
 docker exec -it fedora-28 /usr/bin/cp /var/lib/pulp/.config/pulp_smash/settings.json /root/.config/pulp_smash/settings.json
