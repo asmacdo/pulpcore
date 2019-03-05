@@ -28,7 +28,7 @@ git clone https://github.com/pulp/ansible-pulp3.git
 cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
 # ansible-galaxy install -r requirements.yml
-molecule --debug test --scenario-name source
+molecule test --scenario-name source
 # ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
 
