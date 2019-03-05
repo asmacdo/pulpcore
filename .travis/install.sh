@@ -29,7 +29,7 @@ git clone https://github.com/pulp/pulp_file.git
 cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
 # ansible-galaxy install -r requirements.yml
-molecule test --source
+molecule test --scenario-name source
 # ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
 
