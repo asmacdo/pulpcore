@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # coding=utf-8
-docker exec -it --user pulp fedora-28 /usr/local/lib/pulp/bin/pytest -v -r sx --color=yes --pyargs pulpcore.tests.functional || show_logs_and_return_non_zero
+docker exec -it fedora-28 /usr/bin/mkdir -p /root/.config/pulp_smash/
+docker exec -it fedora-28 /usr/bin/cp /var/lib/pulp/.config/pulp_smash/settings.json /root/.config/pulp_smash/settings.json
+docker exec -it fedora-28 /usr/local/lib/pulp/bin/pytest -v -r sx --color=yes --pyargs pulpcore.tests.functional || show_logs_and_return_non_zero
 # set -mveuo pipefail
 #
 # wait_for_pulp() {
