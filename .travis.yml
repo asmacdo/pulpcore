@@ -3,31 +3,12 @@ sudo: required
 dist: xenial
 language: python
 python:
-  # - '3.6'
   - '3.7'
-# env:
-  # matrix:
-    # TODO should this just use ansible role?
     # - DJANGO_MAX=2.2.100 DB=postgres TEST=pulp
     # - DJANGO_MAX=2.2.100 TEST=docs
-# matrix:
-#   fast_finish: true
-addons:
-  apt:
-    packages:
-      - httpie
-      - jq
-      # - postgresql
-      # - postgresql-contrib
-  # postgres versions provided by el7 RHSCL (lowest supportable version)
-  # TODO should this just use ansible role?
 services:
   - docker
-  # TODO
-  # - postgresql
-  # - redis-server
 install: source .travis/install.sh
-# before_script: source .travis/before_script.sh
 script: .travis/script.sh
 # jobs:
 #   include:

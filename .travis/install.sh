@@ -1,41 +1,17 @@
 #!/usr/bin/env sh
 set -v
 
-# psql -U postgres -c 'CREATE USER pulp WITH SUPERUSER LOGIN;'
-# psql -U postgres -c 'CREATE DATABASE pulp OWNER pulp;'
-
-# pwd
-# /home/travis/build/asmacdo/pulpcore
-# ls /home/travis/build/asmacdo/pulpcore
-# ls /home/travis/build/asmacdo/pulpcore/pulpcore
 pip install molecule
 pip install docker
 pip install ansible
 
+
 cd ..
 git clone https://github.com/asmacdo/ansible-pulp3.git
-#
-
-
-# Install latest ansible
-# sudo apt-get update
-# sudo apt-get install software-properties-common
-# sudo apt-add-repository --yes --update ppa:ansible/ansible
-# sudo apt-get install ansible
-# ansible-playbook --version
-
-# Run Ansible playbook
-cp pulpcore/.travis/playbook.yml ansible-pulp3/playbook.yml
 pushd ansible-pulp3
-# ansible-galaxy install -r requirements.yml
 molecule converge --scenario-name smash
-# ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -vvv
 popd
 cd pulpcore
-
-# Add molecule container hostname and ip to /etc/hosts
-# docker exec -it fedora-28 /usr/bin/cat /etc/hosts | grep f28 | sudo tee --append /etc/hosts
-
 
 # # dev_requirements should not be needed for testing; don't install them to make sure
 # pip install "Django<=$DJANGO_MAX"
