@@ -10,6 +10,7 @@
         app_label: "file"
         source_dir: "/home/travis/build/asmacdo/pulp_file"
     ansible_python_interpreter: /opt/pyenv/shims/python3
+    pulp_python_interpreter: /opt/pyenv/shims/python3
     pulp_user: 'travis'
     developer_user: 'travis'
     postgresql_daemon: postgresql@11-main
