@@ -9,6 +9,7 @@ set -v
 # ls /home/travis/build/asmacdo/pulpcore
 # ls /home/travis/build/asmacdo/pulpcore/pulpcore
 pip install molecule
+pip install docker
 pip install ansible
 
 cd ..
