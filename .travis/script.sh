@@ -2,10 +2,13 @@
 # coding=utf-8
 
 # Run unit tests
-docker exec -it fedora-28 /usr/local/lib/pulp/bin/manage.py test ./pulpcore/tests/unit/
+docker exec -it  fedora-28 /usr/local/lib/pulp/bin/python /var/lib/pulp/devel/pulpcore/manage.py test /var/lib/pulp/devel/pulpcore/pulpcore/tests/unit/
 
+# Configure Smash
 docker exec -it fedora-28 /usr/bin/mkdir -p /root/.config/pulp_smash/
 docker exec -it fedora-28 /usr/bin/cp /var/lib/pulp/.config/pulp_smash/settings.json /root/.config/pulp_smash/settings.json
+
+# Run functional tests
 docker exec -it fedora-28 /usr/local/lib/pulp/bin/pytest -v -r sx --color=yes --pyargs pulpcore.tests.functional || show_logs_and_return_non_zero
 docker exec -it fedora-28 /usr/local/lib/pulp/bin/pytest -v -r sx --color=yes --pyargs pulp_file.tests.functional || show_logs_and_return_non_zero
 
