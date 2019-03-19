@@ -26,14 +26,14 @@ if [ -n "$PULP_PLUGIN_PR_NUMBER" ]; then
 fi
 
 git clone https://github.com/pulp/pulp_file.git
-if [ -z "$PULP_FILE_PR_NUMBER" ]; then
+if [ -n "$PULP_FILE_PR_NUMBER" ]; then
   cd pulp_file
   git fetch origin +refs/pull/$PULP_FILE_PR_NUMBER/merge
   git checkout FETCH_HEAD
   cd ..
 fi
 
-if [ ! -z "$PULP_SMASH_PR_NUMBER" ]; then
+if [ -n "$PULP_SMASH_PR_NUMBER" ]; then
   pip uninstall -y pulp-smash
   git clone https://github.com/PulpQE/pulp-smash.git
   cd pulp-smash
